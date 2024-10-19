@@ -1,0 +1,14 @@
+.homepage {
+    background-color: rgb(0, 0, 255);
+    color: rgb(248, 3, 3);
+}
+
+.upload-page {
+    background-color: purple;
+    color: rgb(9, 9, 9);
+}
+
+.about-page {
+    background-color: green;
+    color: rgb(255, 255, 255);
+}

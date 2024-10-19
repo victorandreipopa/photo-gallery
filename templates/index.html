@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4" style="background-color: blue;">
+    <h2>Photo Gallery</h2>
+    {% for category, images in images.items() %}
+        <h3>{{ category }}</h3>
+        <div class="row">
+            {% for image in images %}
+                <div class="col-md-3 mb-4">
+                    <div class="card shadow-sm">
+                        <a href="{{ url_for('static', filename='uploads/' ~ image) }}">
+                            <img src="{{ url_for('static', filename='uploads/' ~ image ~ '.thumb.jpg') }}" class="card-img-top" alt="...">
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
